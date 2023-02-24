@@ -31,4 +31,8 @@ class Employee extends Model
     {
         return $this->hasOne(Performance::class);
     }
+    public function Attendance()
+    {
+        return $this->hasMany(Attendance::class);
+    }
 }

@@ -106,7 +106,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link collapsed" href="{{route('timesheet')}}">
+            <a class="nav-link collapsed" href="{{route('payroll')}}">
                 <i class="bi bi-person-lines-fill"></i><span>Payroll</span>
             </a>
         </li>

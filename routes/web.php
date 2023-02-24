@@ -12,6 +12,7 @@ use App\Http\Livewire\Hr1\Recruitment;
 use App\Http\Livewire\Hr1\RecruitmentRequest;
 use App\Http\Livewire\Hr1Dashboard;
 use App\Http\Livewire\Hr2\CoreHumanCapital;
+use App\Http\Livewire\Hr2\Payroll;
 use App\Http\Livewire\Hr2\TimeAndAttendance;
 use App\Http\Livewire\Hr2\TimesheetManagement;
 use App\Http\Livewire\Hr2Dashboard;
@@ -53,6 +54,7 @@ Route::prefix('hr-2')->middleware('hr2')->group(function () {
     Route::get('attendance', TimeAndAttendance::class)->name('timesheet');
     Route::get('timesheet', TimesheetManagement::class)->name('timesheet-management');
     Route::get('core-human-capital', CoreHumanCapital::class)->name('hcm');
+    Route::get('payroll', Payroll::class)->name('payroll');
 });
 
 Route::prefix('employee')->middleware('employee')->group(function () {
