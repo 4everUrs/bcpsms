@@ -35,11 +35,6 @@
             </ul>
         </li>
         <li class="nav-item">
-            <a class="nav-link collapsed" href="{{route('recruitment')}}">
-                <i class="bi bi-person-lines-fill"></i><span>Recruitment</span>
-            </a>
-        </li>
-        <li class="nav-item">
             <a class="nav-link collapsed" href="{{route('applicant')}}">
                 <i class="bi bi-person-badge"></i><span>Applicant Management</span>
             </a>

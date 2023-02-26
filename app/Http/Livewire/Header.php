@@ -25,6 +25,7 @@ class Header extends Component
             'employee_id' => Auth::user()->username,
             'time_in' => Carbon::now(),
         ]);
+        sweetalert()->addSuccess('Time-in Successfully');
     }
     public function time_out()
     {
@@ -34,5 +35,6 @@ class Header extends Component
             $attendance->rendered_hours = Carbon::parse($attendance->time_in)->diffInHours();
             $attendance->save();
         }
+        sweetalert()->addSuccess('Time-out Successfully');
     }
 }

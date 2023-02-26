@@ -10,15 +10,11 @@
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div><!-- End Logo -->
        @isEmployee
-        @if ($attendance->time_in == null || $attendance->time_out != null)
-            <button  wire:click="attendance" class="btn btn-success" style="margin-left: 10px">Time In</button>
-            <span style="margin-left: 30px">{{Carbon\Carbon::parse(now())->toFormattedDateString()}}</span>|
-            <span wire:poll.1000ms>{{Carbon\Carbon::parse(now())->format('g:i:A')}}</span>
-        @else
-            <button wire:click="time_out" class="btn btn-success" style="margin-left: 10px">Time Out</button>
-            <span style="margin-left: 30px">{{Carbon\Carbon::parse(now())->toFormattedDateString()}}</span>|
-            <span wire:poll.1000ms>{{Carbon\Carbon::parse(now())->format('g:i:A')}}</span>
-        @endif
+        <button wire:click="attendance" class="btn btn-success" style="margin-left: 10px">Time In</button>
+        
+        <button wire:click="time_out" class="btn btn-success" style="margin-left: 10px">Time Out</button>
+        <span style="margin-left: 30px">{{Carbon\Carbon::parse(now())->toFormattedDateString()}}</span>|
+        <span wire:poll.1000ms>{{Carbon\Carbon::parse(now())->format('g:i:A')}}</span>
        @endisEmployee
         <nav class="header-nav ms-auto" wire:ignore>
             <ul class="d-flex align-items-center">
