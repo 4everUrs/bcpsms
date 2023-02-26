@@ -40,7 +40,7 @@ class Recruitment extends Component
         return view('livewire.hr1.recruitment', [
             'vacancies' => Vacancy::orderBy('id', 'desc')
                 ->paginate(10),
-            'requests' => RecruitmentRequestList::all()
+            'requests' => RecruitmentRequestList::where('status', 'Approved')->get()
         ]);
     }
     // public function mount()

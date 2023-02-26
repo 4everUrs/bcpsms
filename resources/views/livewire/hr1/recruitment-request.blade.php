@@ -19,7 +19,11 @@
                     <td class="text-center">{{$request->slot}}</td>
                     <td class="text-center">{{$request->salary_min}} - {{$request->salary_max}}</td>
                     <td class="text-center">
+                        @if ($request->status == 'Approved')
+                            <button wire:click='approve({{$request->id}})' class="btn btn-secondary btn-sm" disabled>Approved</button>
+                        @else
                         <button wire:click='approve({{$request->id}})' class="btn btn-primary btn-sm">Approve</button>
+                        @endif
                     </td>
                 </tr>
             @endforeach
