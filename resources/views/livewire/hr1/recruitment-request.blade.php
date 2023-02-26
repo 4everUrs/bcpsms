@@ -19,7 +19,7 @@
                     <td class="text-center">{{$request->slot}}</td>
                     <td class="text-center">{{$request->salary_min}} - {{$request->salary_max}}</td>
                     <td class="text-center">
-                        <button class="btn btn-primary btn-sm">Approve</button>
+                        <button wire:click='approve({{$request->id}})' class="btn btn-primary btn-sm">Approve</button>
                     </td>
                 </tr>
             @endforeach

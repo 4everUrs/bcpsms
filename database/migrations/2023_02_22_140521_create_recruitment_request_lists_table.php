@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('recruitment_request_lists', function (Blueprint $table) {
             $table->id();
             $table->string('position');
+            $table->string('status')->nullable()->default('Pending');
             $table->integer('slot');
             $table->bigInteger('salary_min');
             $table->bigInteger('salary_max');

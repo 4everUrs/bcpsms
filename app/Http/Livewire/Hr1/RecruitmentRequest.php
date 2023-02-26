@@ -13,4 +13,11 @@ class RecruitmentRequest extends Component
             'requests' => RecruitmentRequestList::all()
         ]);
     }
+    public function approve($id)
+    {
+        RecruitmentRequestList::find($id)->update([
+            'status' => 'Approved'
+        ]);
+        sweetalert()->addSuccess('Approve Successfully');
+    }
 }

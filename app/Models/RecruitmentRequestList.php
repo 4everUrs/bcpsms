@@ -10,6 +10,6 @@ class RecruitmentRequestList extends Model
     use HasFactory;
 
     protected $fillable = [
-        'position', 'slot', 'salary_min', 'salary_max'
+        'position', 'slot', 'salary_min', 'salary_max', 'status'
     ];
 }
