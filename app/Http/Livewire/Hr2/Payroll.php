@@ -41,6 +41,9 @@ class Payroll extends Component
             'cutoff_attendance_id' => $cutoffs->id,
             'monthly_attendance_id' => $this->month,
         ]);
+        $this->dispatchBrowserEvent('close-payroll-modal');
+        sweetalert()->addSuccess('Create Successfully');
+        $this->reset();
     }
     public function getID($id)
     {
@@ -77,5 +80,8 @@ class Payroll extends Component
                 ]);
             }
         }
+        $this->dispatchBrowserEvent('close-payslip-modal');
+        sweetalert()->addSuccess('Import Successfully');
+        $this->reset();
     }
 }

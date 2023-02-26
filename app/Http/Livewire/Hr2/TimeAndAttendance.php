@@ -13,6 +13,7 @@ use Livewire\Component;
 class TimeAndAttendance extends Component
 {
     public $attendances;
+    protected $listeners = ['createCutoff' => 'createCuttoff'];
     public function render()
     {
         return view('livewire.hr2.time-and-attendance', [
@@ -21,6 +22,10 @@ class TimeAndAttendance extends Component
     }
 
     public function mount()
+    {
+        $this->createCuttoff();
+    }
+    public function createCuttoff()
     {
         $month = Carbon::parse(now())->format('F,Y');
         $year = Carbon::parse(now())->format('Y');
@@ -43,6 +48,6 @@ class TimeAndAttendance extends Component
     }
     public function getData($id)
     {
-        $this->attendances = Attendance::where('id', $id)->get();
+        $this->attendances = Attendance::where('cutoff_attendance_id', $id)->get();
     }
 }

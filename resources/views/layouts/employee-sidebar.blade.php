@@ -15,6 +15,12 @@
                 <span>Attendance</span>
             </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('eleave')}}">
+                <i class="ri ri-dashboard-fill"></i>
+                <span>Leave Management</span>
+            </a>
+        </li>
         {{-- <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
                 <i class="bi bi-gem"></i><span>Icons</span><i class="bi bi-chevron-down ms-auto"></i>

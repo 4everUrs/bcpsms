@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\GeneralInformartion;
 use App\Providers\RouteServiceProvider;
 use Closure;
 use Illuminate\Http\Request;
@@ -24,7 +25,6 @@ class RedirectIfAuthenticated
                 return redirect(RouteServiceProvider::HOME);
             }
         }
-
         return $next($request);
     }
 }

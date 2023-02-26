@@ -13,7 +13,7 @@ class Header extends Component
     public $attendance;
     public function render()
     {
-        $this->attendance = Attendance::where('employee_id', Auth::user()->id)->latest()->first();
+        $this->attendance = Attendance::where('employee_id', Auth::user()->username)->latest()->first();
         return view('livewire.header');
     }
 
@@ -28,9 +28,11 @@ class Header extends Component
     }
     public function time_out()
     {
-        $attendance = Attendance::latest('id', Auth::user()->id)->first();
-        $attendance->time_out = Carbon::now();
-        $attendance->rendered_hours = Carbon::parse($attendance->time_in)->diffInHours();
-        $attendance->save();
+        if ($this->attendance->time_out == null) {
+            $attendance = Attendance::latest('id', Auth::user()->id)->first();
+            $attendance->time_out = Carbon::now();
+            $attendance->rendered_hours = Carbon::parse($attendance->time_in)->diffInHours();
+            $attendance->save();
+        }
     }
 }

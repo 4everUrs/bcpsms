@@ -20,3 +20,4 @@
 <script src="{{asset('assets/js/main.js')}}"></script>
 @livewireScripts
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+

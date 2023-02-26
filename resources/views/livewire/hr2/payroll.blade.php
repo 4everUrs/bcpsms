@@ -111,4 +111,17 @@
             <x-modal-button wire:click='createPayslip'></x-modal-button>
         </x-slot>
     </x-modal>
+
+    <script>
+        window.addEventListener('close-payslip-modal',event=>{
+        $("#importData").removeClass("in");
+        $(".modal-backdrop").remove();
+        $("#importData").hide();
+        })
+        window.addEventListener('close-payroll-modal',event=>{
+        $("#newPayroll").removeClass("in");
+        $(".modal-backdrop").remove();
+        $("#newPayroll").hide();
+        })
+    </script>
 </div>

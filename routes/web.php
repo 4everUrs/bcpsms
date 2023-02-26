@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\GeneralController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Livewire\Employee\Attendance;
 use App\Http\Livewire\Employee\Employee;
+use App\Http\Livewire\Employee\EmployeeLeaveManagement;
 use App\Http\Livewire\Hr1\ApplicantManagement;
 use App\Http\Livewire\Hr1\LearningManagement;
 use App\Http\Livewire\Hr1\NewHireOnboard;
@@ -12,6 +14,7 @@ use App\Http\Livewire\Hr1\Recruitment;
 use App\Http\Livewire\Hr1\RecruitmentRequest;
 use App\Http\Livewire\Hr1Dashboard;
 use App\Http\Livewire\Hr2\CoreHumanCapital;
+use App\Http\Livewire\Hr2\LeaveManagement;
 use App\Http\Livewire\Hr2\Payroll;
 use App\Http\Livewire\Hr2\TimeAndAttendance;
 use App\Http\Livewire\Hr2\TimesheetManagement;
@@ -32,6 +35,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return redirect('/login');
 });
+
 
 Route::get('/redirects', [LoginController::class, 'home']);
 
@@ -55,11 +59,13 @@ Route::prefix('hr-2')->middleware('hr2')->group(function () {
     Route::get('timesheet', TimesheetManagement::class)->name('timesheet-management');
     Route::get('core-human-capital', CoreHumanCapital::class)->name('hcm');
     Route::get('payroll', Payroll::class)->name('payroll');
+    Route::get('leave-management', LeaveManagement::class)->name('leave');
 });
 
 Route::prefix('employee')->middleware('employee')->group(function () {
     Route::get('dashboard', Employee::class)->name('employeeDashboard');
     Route::get('attendance', Attendance::class)->name('attendance');
+    Route::get('leave', EmployeeLeaveManagement::class)->name('eleave');
 });
 Route::get('/dashboard', function () {
     return view('dashboard');

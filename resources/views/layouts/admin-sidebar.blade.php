@@ -101,7 +101,7 @@
             </ul>
         </li>
         <li class="nav-item">
-            <a class="nav-link collapsed" href="{{route('timesheet')}}">
+            <a class="nav-link collapsed" href="{{route('leave')}}">
                 <i class="bi bi-person-lines-fill"></i><span>Leave Management</span>
             </a>
         </li>
