@@ -48,7 +48,7 @@ class ApplicantManagement extends Component
         Candidate::find($id)->update([
             'status' => 'Approved'
         ]);
-        $candidate = Candidate::latest()->first();
+        $candidate = Candidate::find($id);
         Training::create([
             'candidate_id' => $candidate->id,
         ]);

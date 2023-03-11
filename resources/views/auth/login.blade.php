@@ -42,8 +42,7 @@
                                 <div class="form-group">
                                     <input id="password-field" type="password" name="password" class="form-control" required>
                                     <label class="form-control-placeholder" for="password">Password</label>
-                                    <span toggle="#password-field"
-                                        class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                    <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign

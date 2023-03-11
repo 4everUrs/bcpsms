@@ -45,12 +45,12 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#">
+            <a class="nav-link collapsed" href="{{route('construction')}}">
                 <i class="bi bi-person-badge"></i><span>Social Recognition</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#">
+            <a class="nav-link collapsed" href="{{route('construction')}}">
                 <i class="bi bi-person-badge"></i><span>Compentency Management</span>
             </a>
         </li>
@@ -60,7 +60,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#">
+            <a class="nav-link collapsed" href="{{route('construction')}}">
                 <i class="bi bi-person-badge"></i><span>Succession Planning</span>
             </a>
         </li>
@@ -106,12 +106,12 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link collapsed" href="{{route('timesheet')}}">
+            <a class="nav-link collapsed" href="{{route('dashboard')}}">
                 <i class="bi bi-person-lines-fill"></i><span>HR Analytics</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link collapsed" href="{{route('timesheet')}}">
+            <a class="nav-link collapsed" href="{{route('construction')}}">
                 <i class="bi bi-person-lines-fill"></i><span>Claims and Reimbursement</span>
             </a>
         </li>
@@ -121,7 +121,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link collapsed" href="{{route('timesheet')}}">
+            <a class="nav-link collapsed" href="{{route('construction')}}">
                 <i class="bi bi-person-lines-fill"></i><span>Compensation Planing</span>
             </a>
         </li>

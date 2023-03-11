@@ -28,22 +28,22 @@
             </ul>
         </li>
         <li class="nav-item">
-            <a class="nav-link collapsed" href="{{route('timesheet')}}">
+            <a class="nav-link collapsed" href="{{route('leave')}}">
                 <i class="bi bi-person-lines-fill"></i><span>Leave Management</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link collapsed" href="{{route('timesheet')}}">
+            <a class="nav-link collapsed" href="{{route('payroll')}}">
                 <i class="bi bi-person-lines-fill"></i><span>Payroll</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link collapsed" href="{{route('timesheet')}}">
+            <a class="nav-link collapsed" href="{{route('hr2Dashboard')}}">
                 <i class="bi bi-person-lines-fill"></i><span>HR Analytics</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link collapsed" href="{{route('timesheet')}}">
+            <a class="nav-link collapsed" href="{{route('construction')}}">
                 <i class="bi bi-person-lines-fill"></i><span>Claims and Reimbursement</span>
             </a>
         </li>
@@ -53,7 +53,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link collapsed" href="{{route('timesheet')}}">
+            <a class="nav-link collapsed" href="{{route('construction')}}">
                 <i class="bi bi-person-lines-fill"></i><span>Compensation Planing</span>
             </a>
         </li>

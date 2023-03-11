@@ -46,6 +46,7 @@ class LoginRequest extends FormRequest
 
             throw ValidationException::withMessages([
                 'username' => trans('auth.failed'),
+                sweetalert()->addError('Invalid Credentials')
             ]);
         }
 

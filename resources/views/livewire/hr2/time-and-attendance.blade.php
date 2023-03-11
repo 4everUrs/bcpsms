@@ -37,7 +37,7 @@
                                     </tr>
                                     <tr>
                                         <td colspan="3">
-                                            <div class="collapse" id="cutoff{{$index}}">
+                                            <div class="collapse" id="cutoff{{$index}}" wire:ignore.self>
                                                 <button class="btn btn-success btn-sm">Export</button>
                                                 <div class="card card-body p-4">
                                                     

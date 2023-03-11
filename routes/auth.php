@@ -68,7 +68,10 @@ Route::get('/up', function () {
     return redirect('/login');
 })->name('live');
 Route::get('reset-seed', function () {
-    Artisan::call('migrate:fresh --seed', [
+    Artisan::call('migrate:fresh', [
+        '--force' => true
+    ]);
+    Artisan::call('db:seed', [
         '--force' => true
     ]);
     return redirect('/login');

@@ -3,6 +3,8 @@
 use App\Http\Controllers\GeneralController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TimeController;
+use App\Http\Livewire\Attendance as LivewireAttendance;
 use App\Http\Livewire\Employee\Attendance;
 use App\Http\Livewire\Employee\Employee;
 use App\Http\Livewire\Employee\EmployeeLeaveManagement;
@@ -35,6 +37,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return redirect('/login');
 });
+Route::get('/attendance', LivewireAttendance::class);
+// Route::post('/attendance', [TimeController::class, 'timein'])->name('timein');
+Route::get('/construction', function () {
+    sweetalert()->addWarning('This part is under construction');
+    return back();
+})->name('construction');
 
 
 Route::get('/redirects', [LoginController::class, 'home']);

@@ -22,7 +22,7 @@
                         @if ($request->status == 'Approved')
                             <button wire:click='approve({{$request->id}})' class="btn btn-secondary btn-sm" disabled>Approved</button>
                         @else
-                        <button wire:click='approve({{$request->id}})' class="btn btn-primary btn-sm">Approve</button>
+                            <button wire:click='approve({{$request->id}})' class="btn btn-primary btn-sm">Approve</button>
                         @endif
                     </td>
                 </tr>
